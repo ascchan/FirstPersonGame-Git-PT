@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2855164800618785696}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.28, z: 0}
+  m_LocalPosition: {x: 0, y: 2.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 110868042620871335}
-  - component: {fileID: 9055749870218240694}
+  - component: {fileID: 4770880715396020915}
   - component: {fileID: 4894757752779110398}
   - component: {fileID: 408411679248390675}
   - component: {fileID: 655923037289646940}
@@ -267,7 +267,7 @@ Transform:
   - {fileID: 3094128110466970214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9055749870218240694
+--- !u!114 &4770880715396020915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   moveSpeed: 5
   lookRotation: {x: 0, y: 0, z: 0}
   lookSpeed: 50
-  jumpForce: 0
+  jumpForce: 5
 --- !u!143 &4894757752779110398
 CharacterController:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ CharacterController:
   m_Radius: 0.45
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &408411679248390675
@@ -349,10 +349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomPhysicsModule
   gravityForce: -9.81
-  sphereCheckRadius: 0.05
+  sphereCheckRadius: 0.075
   floorLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 7
   upDownForce: {x: 0, y: 0, z: 0}
 --- !u!114 &5748261244547033420
 MonoBehaviour:
@@ -392,13 +392,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4568181466713863919}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.41, z: 1.58}
+  m_LocalRotation: {x: -0.042405937, y: -0.08170334, z: -0.01661968, w: 0.9956154}
+  m_LocalPosition: {x: 0.419, y: -0.273, z: 1.356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2279371005170545817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5, y: -9.317, z: -1.505}
 --- !u!1 &5824997930620978620
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 1539266947026239972}
   - component: {fileID: 5814435517150267770}
   m_Layer: 3
-  m_Name: Cube
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,13 +426,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5824997930620978620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34, y: -0.37, z: 0.64}
+  m_LocalRotation: {x: -0.042405937, y: -0.08170334, z: -0.01661968, w: 0.9956154}
+  m_LocalPosition: {x: 0.44, y: -0.37, z: 0.64}
   m_LocalScale: {x: 0.33975, y: 0.25760326, z: 1.3068}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2279371005170545817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5, y: -9.317, z: -1.505}
 --- !u!33 &4210213152212708634
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d719290bd6f8bcf44a603674762ea716, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

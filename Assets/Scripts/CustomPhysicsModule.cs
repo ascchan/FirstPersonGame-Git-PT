@@ -17,10 +17,12 @@ public class CustomPhysicsModule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if( IsGrounded() )
         {
-            upDownForce.y = 0;
+            if(upDownForce.y < 0)
+            {
+                upDownForce.y = 0;
+            }
         }
         else
         {

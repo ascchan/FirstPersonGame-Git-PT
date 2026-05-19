@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerImput : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
     public Vector3 movementDirection;
     [SerializeField] private float moveSpeed;
@@ -17,6 +17,8 @@ public class PlayerImput : MonoBehaviour
 
     void Awake()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         characterController = GetComponent<CharacterController>();
         customPhysicsModule = GetComponent<CustomPhysicsModule>();

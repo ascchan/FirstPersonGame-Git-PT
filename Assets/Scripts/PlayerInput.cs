@@ -13,6 +13,7 @@ public class PlayerInput : MonoBehaviour
     private CharacterController characterController;
     private CustomPhysicsModule customPhysicsModule;
     private ShootingModule shootingModule;
+    private InteractionModule interactionModule;
     private Camera characterHead;
 
     void Awake()
@@ -23,6 +24,7 @@ public class PlayerInput : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         customPhysicsModule = GetComponent<CustomPhysicsModule>();
         shootingModule = GetComponent<ShootingModule>();
+        interactionModule = GetComponent<InteractionModule>();
 
         characterHead = GetComponentInChildren<Camera>();
     }
@@ -34,7 +36,7 @@ public class PlayerInput : MonoBehaviour
         HandleLookInput();
         HandleMoveInput();
         HandleShootInput();
-
+        HandleInteractionInput();
     }
 
     private void HandleMoveInput()
@@ -82,5 +84,16 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    private void HandleInteractionInput()
+    { 
+        if( Input.GetMouseButtonDown(1) )
+        {
+            interactionModule.StartInteraction();
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            interactionModule.StopInteraction();
+        }
+    }
 }
 

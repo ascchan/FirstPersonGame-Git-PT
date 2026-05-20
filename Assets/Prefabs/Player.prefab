@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 408411679248390675}
   - component: {fileID: 655923037289646940}
   - component: {fileID: 5748261244547033420}
+  - component: {fileID: 8881545562932862914}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -352,7 +353,7 @@ MonoBehaviour:
   sphereCheckRadius: 0.075
   floorLayerMask:
     serializedVersion: 2
-    m_Bits: 7
+    m_Bits: 1
   upDownForce: {x: 0, y: 0, z: 0}
 --- !u!114 &5748261244547033420
 MonoBehaviour:
@@ -368,6 +369,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootingModule
   weaponTip: {fileID: 5204114643329534317}
   projectilePrefab: {fileID: 5697852422599626601, guid: f0fce9184d83e7a4c82df758245affb3, type: 3}
+--- !u!114 &8881545562932862914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4206306485837105388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa37465e9cab624a85d259d2ee89027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionModule
+  rayOriginTransform: {fileID: 2279371005170545817}
+  interactionRange: 2.5
 --- !u!1 &4568181466713863919
 GameObject:
   m_ObjectHideFlags: 0

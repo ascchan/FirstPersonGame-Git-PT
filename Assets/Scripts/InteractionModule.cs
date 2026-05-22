@@ -27,7 +27,7 @@ public class InteractionModule : MonoBehaviour
             highlightedInteraction = null;
         }
 
-        Debug.DrawRay(rayOriginTransform.position, rayOriginTransform.forward * interactionRange, Color.blue);
+        Debug.DrawRay(rayOriginTransform.position, rayOriginTransform.forward * interactionRange, Color.yellow);
 
     }
 
@@ -35,6 +35,9 @@ public class InteractionModule : MonoBehaviour
     {
         if(highlightedInteraction != null)
         {
+            //Debug.Log(Vector3.Distance(transform.position, highlightedInteraction.transform.position));
+            //detect the distance between the player and the interactable object, if it's too far, don't interact with it
+
             Interactable interaction = highlightedInteraction.GetComponent<Interactable>();
             interaction.OnStartInteraction.Invoke();
 

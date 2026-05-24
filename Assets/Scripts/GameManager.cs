@@ -36,5 +36,8 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-
+    public PlayerInput GetPlayer()
+    {
+        return player;
+    }
 }

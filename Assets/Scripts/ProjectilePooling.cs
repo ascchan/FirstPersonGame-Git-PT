@@ -28,12 +28,19 @@ public class ProjectilePooling : MonoBehaviour
 
     public Projectile GetAvailableProjectile()
     {
-        Projectile toRetrieve = availableProjectiles[0];
 
-        availableProjectiles.Remove(toRetrieve);
-        usedProjectiles.Add(toRetrieve);
- 
-        return toRetrieve;
+        if (availableProjectiles.Count != 0)
+        {
+            Projectile toRetrieve = availableProjectiles[0];
+
+            availableProjectiles.Remove(toRetrieve);
+            usedProjectiles.Add(toRetrieve);
+
+            return toRetrieve;
+
+        }
+
+        return null;
     }
 
     public void SetProjectileAvailable(Projectile toReset)

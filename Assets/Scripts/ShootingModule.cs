@@ -8,10 +8,15 @@ public class ShootingModule : MonoBehaviour
     public void Shoot()
     {
         Projectile projectileInstance = projectilePool.GetAvailableProjectile();
-        projectileInstance.transform.position = weaponTip.position;
-        projectileInstance.transform.rotation = weaponTip.rotation;
-        projectileInstance.gameObject.SetActive(true);
 
-        projectileInstance.InitializeBullet();
+        if (projectileInstance != null)
+        {
+            projectileInstance.transform.position = weaponTip.position;
+            projectileInstance.transform.rotation = weaponTip.rotation;
+            projectileInstance.gameObject.SetActive(true);
+
+            projectileInstance.InitializeBullet();
+
+        }
     }
 }

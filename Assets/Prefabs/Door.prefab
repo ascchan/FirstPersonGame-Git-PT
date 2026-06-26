@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8719781936583822709}
   - component: {fileID: 1467806447093831729}
-  - component: {fileID: 3148497559196256756}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -36,20 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1467806447093831729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6043031035877361560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf0ab7d2bd1d554f8aecb6339a1d3cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorControl
-  trigger: {fileID: 6653217008328671467}
-  doorRenderer: {fileID: 4736424652493571562}
---- !u!114 &3148497559196256756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,8 +176,8 @@ Transform:
   m_GameObject: {fileID: 7696739031852587227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.76, z: 0}
-  m_LocalScale: {x: 0.5, y: 3, z: 2}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0.16}
+  m_LocalScale: {x: 0.5, y: 5.2920003, z: 3.1464}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8719781936583822709}
@@ -230,7 +215,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cc4e59440b8d6b4418705c78fd3e2c97, type: 2}
+  - {fileID: 2100000, guid: b10bbf8084cf3334990cd3085af75faf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

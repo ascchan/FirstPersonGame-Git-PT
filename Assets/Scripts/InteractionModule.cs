@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InteractionModule : MonoBehaviour
@@ -5,6 +6,8 @@ public class InteractionModule : MonoBehaviour
     [SerializeField] private Transform rayOriginTransform;
     [SerializeField] private float interactionRange;
     [SerializeField] private LayerMask interactableLayer;
+
+    public Action<GameObject> OnNewInteractionFound;
 
     private GameObject highlightedInteraction;
     private Interactable pickUpInteraction;
@@ -21,10 +24,23 @@ public class InteractionModule : MonoBehaviour
             Debug.Log( "Press F to interact" );
             //Debug.Log(hitInfo.collider.name);
             highlightedInteraction = hitInfo.collider.gameObject;
+            highlightedInteraction.layer = 9;
+            
+            //NEW INTERACTION FOUND
+            OnNewInteractionFound?.Invoke( highlightedInteraction );
         }
         else
         {
+            if(highlightedInteraction != null)
+            {
+                highlightedInteraction.layer = 8;
+            }
             highlightedInteraction = null;
+
+            //NO INTERACTION FOUND
+            OnNewInteractionFound?.Invoke(null);
+
+
         }
 
         Debug.DrawRay(rayOriginTransform.position, rayOriginTransform.forward * interactionRange, Color.yellow);

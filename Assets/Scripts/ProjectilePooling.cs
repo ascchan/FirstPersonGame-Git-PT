@@ -14,33 +14,36 @@ public class ProjectilePooling : MonoBehaviour
     {
         while( availableProjectiles.Count < poolAmount )
         {
-            Projectile clonedProjectile = Instantiate(ProjectilePrefab);
-
-            clonedProjectile.parentPool = this;
-
-            clonedProjectile.gameObject.SetActive(false);
-            clonedProjectile.transform.SetParent(transform);
-            availableProjectiles.Add(clonedProjectile);
-
+            CreateProjectile(); 
         }
         
     }
 
+
+    void CreateProjectile()
+    {
+        Projectile clonedProjectile = Instantiate(ProjectilePrefab);
+
+        clonedProjectile.parentPool = this;
+
+        clonedProjectile.gameObject.SetActive(false);
+        clonedProjectile.transform.SetParent(transform);
+        availableProjectiles.Add(clonedProjectile);
+
+    }
     public Projectile GetAvailableProjectile()
     {
 
-        if (availableProjectiles.Count != 0)
+        if (availableProjectiles.Count == 0)
         {
-            Projectile toRetrieve = availableProjectiles[0];
-
-            availableProjectiles.Remove(toRetrieve);
-            usedProjectiles.Add(toRetrieve);
-
-            return toRetrieve;
-
+            return null;
         }
+        Projectile toRetrieve = availableProjectiles[0];
 
-        return null;
+        availableProjectiles.Remove(toRetrieve);
+        usedProjectiles.Add(toRetrieve);
+
+        return toRetrieve;
     }
 
     public void SetProjectileAvailable(Projectile toReset)

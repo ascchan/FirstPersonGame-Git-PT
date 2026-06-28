@@ -23,7 +23,7 @@ public class UIAimFeedback : MonoBehaviour
         else
         {
             aimFeedbackText.enabled = true;
-            aimFeedbackText.text = "Press RMB to interact with " + interaction.name;
+            aimFeedbackText.text = "Press RMB to " + interaction.name;
         }
     }
 

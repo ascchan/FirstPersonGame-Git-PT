@@ -18,14 +18,20 @@ public class DoorControl : MonoBehaviour
     {
         trigger.SetActive(true);
         doorRenderer.material.color = Color.green;
-        lockStatusText.text = "Unlocked";
+        if(lockStatusText != null)
+        {
+            lockStatusText.text = "Unlocked";
+        }
     }
 
     public void LockDoor()
     {
         trigger.SetActive(false);
         doorRenderer.material.color = Color.red;
-        lockStatusText.text = "Locked";
+        if (lockStatusText != null)
+        {
+            lockStatusText.text = "Locked";
+        }
     }
 
 }

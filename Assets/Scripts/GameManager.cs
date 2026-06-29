@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private PlayerInput player;
+
+    [SerializeField] private TextMeshProUGUI exitEnd_Text;
 
     void Awake()
     {
@@ -47,8 +50,9 @@ public class GameManager : MonoBehaviour
         return player;
     }
 
-    private void GameOver()
+    public void GameOver()
     {
+        exitEnd_Text.gameObject.SetActive(true);
         FreezePlayer();
         //Stop spawning enemies
         //
